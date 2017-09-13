@@ -140,13 +140,13 @@ boost
             }
         };
 
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility push (default)
 # endif
 #endif
     class exception;
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility pop
 # endif
@@ -216,7 +216,7 @@ boost
         E const & set_info( E const &, throw_line const & );
         }
 
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility push (default)
 # endif
@@ -293,7 +293,7 @@ boost
         mutable char const * throw_file_;
         mutable int throw_line_;
         };
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility pop
 # endif
@@ -338,7 +338,7 @@ boost
     namespace
     exception_detail
         {
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility push (default)
 # endif
@@ -359,7 +359,7 @@ boost
                 {
                 }
             };
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility pop
 # endif
@@ -411,7 +411,7 @@ boost
     namespace
     exception_detail
         {
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility push (default)
 # endif
@@ -429,7 +429,7 @@ boost
                 {
                 }
             };
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility pop
 # endif
@@ -454,7 +454,7 @@ boost
             {
             }
 
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility push (default)
 # endif
@@ -500,7 +500,7 @@ boost
                 }
             };
         }
-#if defined(__GNUC__)
+#if defined(__GNUC__) && !defined(BOOST_NODEFAULTVISIBILITY)
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 #  pragma GCC visibility pop
 # endif
